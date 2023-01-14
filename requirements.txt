@@ -1,0 +1,10 @@
+selenium
+requests
+ytmusicapi
+Pillow
+eyed3
+colorama
+moviepy
+yt-dlp
+yandex-music
+webdriver-manager
