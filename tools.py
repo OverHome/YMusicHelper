@@ -37,8 +37,8 @@ def find_track_yt(track):
         search_artists = song['artists'][0]['name']
         title_sequence = SequenceMatcher(lambda x: x in punctuation, track_title, search_title).ratio()
         artists_sequence = SequenceMatcher(lambda x: x in punctuation, track_artists, search_artists).ratio()
-        if (title_sequence + artists_sequence) / 2 >= 70:
-            return "https://www.youtube.com/watch?v=" + song[0]['videoId']
+        if (title_sequence + artists_sequence) / 2 >= 0.70:
+            return "https://www.youtube.com/watch?v=" + song['videoId']
 
     search_results = yt.search(track, filter='videos', limit=5)
     for video in search_results:
